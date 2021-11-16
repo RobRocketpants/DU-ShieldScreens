@@ -11,7 +11,7 @@ Future Proof (uses the new screen RenderScript technology).
 Each screen manages it's own energy pool, allowing for multiuser or as pool presets.
 
 To install:
-- Grab the config from https://pastebin.com/aJyDmFki
+- Download and copy the .conf file from this repository.
 - Paste to a programming board with at least one screen and a shield linked to it.
 
-Only lightly tested, so any feedback or requests are welcome.
+Contact: rob_rocketpants#9999 on discord
