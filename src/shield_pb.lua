@@ -82,3 +82,30 @@ end
 
 
 unit.setTimer('update',0.0001)
+
+
+
+-- tick(update)
+
+local params = {
+    shieldState = shield.getState(),
+    shieldHP = shield.getShieldHitpoints(),
+    shieldMaxHP = shield.getMaxShieldHitpoints(),
+    shieldIsVenting = shield.isVenting(),
+    shieldVentingCooldown = shield.getVentingCooldown(),
+    shieldVentingMaxCooldown = shield.getVentingMaxCooldown(),
+    shieldResistances = shield.getResistances(),
+    shieldResistancesCooldown = shield.getResistancesCooldown(),
+    shieldResistancesMaxCooldown = shield.getResistancesMaxCooldown(),
+    shieldResistancesPool = shield.getResistancesPool(),
+    shieldResistancesRemaining = shield.getResistancesRemaining(),
+    shieldStressRatio = shield.getStressRatioRaw(),
+    lastTime = system.getTime()
+}
+
+for key, screen in pairs(screens) do -- updating screens
+    screen.setScriptInput(json.encode(params))
+end
+
+
+
