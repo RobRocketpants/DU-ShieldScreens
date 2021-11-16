@@ -1,8 +1,10 @@
 # DU-ShieldScreens
 
+![](img/dualuniverse_2021-11-12_13h24m26s.png)
+
 *** UPDATE - Now works with the blueprint/shield bug, displaying a helpful hint :) ***
 
-![](img/dualuniverse_2021-11-12_13h24m26s.png)
+![](img/dualuniverse_2021-11-16_10h09m37s.png)
 
 See a video of the interface in action (descriptions are in the subtitles/CC of the video): https://youtu.be/_1-vTFibuoo
 
