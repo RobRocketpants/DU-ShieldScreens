@@ -1,4 +1,4 @@
-# DU-ShieldScreens
+# Dual Universe - Shield Screens
 
 ![](img/dualuniverse_2021-11-12_13h24m26s.png)
 
