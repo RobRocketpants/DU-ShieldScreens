@@ -20,8 +20,8 @@ if not curTHRes then curTHRes = setTHRes end
 
 
 
-color = params.color or {r=204/255,g=164/255,b=61/255}
-color2 = {r=135/255,g=206/255,b=235/255}
+color = params.color or {r=]]..(color1[1]/255)..[[,g=]]..(color1[2]/255)..[[,b=]]..(color1[3]/255)..[[}
+color2 = {r=]]..(color2[1]/255)..[[,g=]]..(color2[2]/255)..[[,b=]]..(color2[3]/255)..[[}
 
 
 
@@ -34,7 +34,7 @@ local cx, cy = getCursor()
 
 --local sx, sy = getTextBounds(font, message)
 setDefaultStrokeColor(layer, Shape_Line, 1, 1, 1, 0.5)
-setBackgroundColor(0,0.1,0.1)
+setBackgroundColor(]]..(bg[1]/255)..[[,]]..(bg[2]/255)..[[,]]..(bg[3]/255)..[[)
 
 
 --------------------------------------------------------------------------------
@@ -166,7 +166,6 @@ end
 
 function drawButtons ()
     local fonts = getFont('Play-Bold', 25)
-    local fontf = getFont('Montserrat-Bold',15)
     if params.shieldState == 0 then
         setNextFillColor(layer, 0,0,0, 0)
         setDefaultFillColor(layer, Shape_Text, color2.r, color2.g, color2.b, 1)
@@ -284,11 +283,6 @@ function drawButtons ()
     setNextFillColor(layer, color2.r, color2.g, color2.b, 1)
     setNextTextAlign(layer, AlignH_Center, AlignV_Middle)
     addText(layer, fonts, 'RESET', 198,429) 
-
-    setNextTextAlign(layer, AlignH_Center, AlignV_Bottom)
-    setDefaultFillColor(layer, Shape_Text, color.r, color.g, color.b, 1)
-    addText(layer, fontf, 'FOX Technology', rx/2, ry - 15)
-
 
     
 end
@@ -548,19 +542,7 @@ function drawResSettings ()
     setNextStrokeColor(layer, 1, 1, 1, 1)
     addLine(layer, 384+(stage*(setTHRes/5+2)), 440, 384+(stage*(setTHRes/5+2)), 455)
     
-    setDefaultFillColor(layer, Shape_Polygon, color.r, color.g, color.b, 1)
-    setDefaultFillColor(layer, Shape_Box, color.r, color.g, color.b, 1)
-    setDefaultStrokeColor(layer, Shape_Box, color.r, color.g, color.b, 1)
-    setDefaultStrokeWidth(layer, Shape_Box, 0)
-    setDefaultStrokeColor(layer, Shape_Polygon, color.r, color.g, color.b, 1)
-    setDefaultStrokeWidth(layer, Shape_Polygon, 0)
-    addBox(layer, rx/2 -3, ry -45, 6, 6)
-    addQuad(layer, rx/2 +3, ry -45, rx/2 +9, ry -51, rx/2 +15, ry -51, rx/2 +3, ry -39)
-    addQuad(layer, rx/2 -3, ry -45, rx/2 -9, ry -51, rx/2 -15, ry -51, rx/2 -3, ry -39)
-    addBox(layer, rx/2 -15, ry -69, 6, 18)
-    addBox(layer, rx/2 +9, ry -69, 6, 18)
-    addTriangle(layer, rx/2 -15, ry -69, rx/2 -15, ry -81, rx/2 -3, ry -69)
-    addTriangle(layer, rx/2 +15, ry -69, rx/2 +15, ry -81, rx/2 +3, ry -69)
+    ]]..screenLogo..[[
     
     
     
