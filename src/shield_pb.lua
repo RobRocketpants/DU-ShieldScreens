@@ -26,6 +26,7 @@ RGBcolor1 = "201,164,61" --export: Shield Bar, Highlight and Update color
 RGBcolor2 = "135,206,235" --export: Outlines, Text and Controls color
 RGBbackground = "0,26,26" --export: Background color
 
+TTA_Logo = false --export:
 FOX_Logo = true --export: 
 
 function validateComp(n,dc)
@@ -87,8 +88,27 @@ local FOXlogo = [[
     addText(layer, fontf, 'FOX Technology', rx/2, ry - 15)
 ]]
 
+local TTAlogo = [[
+    setDefaultStrokeColor(layer, Shape_Polygon, color.r, color.g, color.b, 1)
+    setDefaultStrokeWidth(layer, Shape_Polygon, 0)
+    setDefaultFillColor(layer, Shape_Polygon, 1, 1, 1, 1)
+    addQuad(layer, rx/2 -3, ry -25, rx/2 -8, ry -30, rx/2 -8, ry -10, rx/2 -3, ry -5)
+    addQuad(layer, rx/2 +8, ry -30, rx/2 +3, ry -25, rx/2 +3, ry -5, rx/2 +8, ry -10)
+    addQuad(layer, rx/2 -50, ry -55, rx/2 -45, ry -50, rx/2 -8, ry -50, rx/2 -8, ry -55)
+    addQuad(layer, rx/2 -40, ry -45, rx/2 -35, ry -40, rx/2 -8, ry -40, rx/2 -8, ry -45)
+    addQuad(layer, rx/2 +50, ry -55, rx/2 +45, ry -50, rx/2 +8, ry -50, rx/2 +8, ry -55)
+    addQuad(layer, rx/2 +40, ry -45, rx/2 +35, ry -40, rx/2 +8, ry -40, rx/2 +8, ry -45)
+    setDefaultFillColor(layer, Shape_Polygon, color.r, color.g, color.b, 1)
+    addQuad(layer, rx/2 -50, ry -75, rx/2 -45, ry -70, rx/2 +45, ry -70, rx/2 +50, ry -75)
+    addQuad(layer, rx/2 -40, ry -65, rx/2 -35, ry -60, rx/2 -8, ry -60, rx/2 -3, ry -65)
+    addQuad(layer, rx/2 +3, ry -65, rx/2 +8, ry -60, rx/2 +35, ry -60, rx/2 +40, ry -65)
+    addQuad(layer, rx/2 -8, ry -60, rx/2 -3, ry -65, rx/2 -3, ry -25, rx/2 -8, ry -30)
+    addQuad(layer, rx/2 +3, ry -65, rx/2 +8, ry -60, rx/2 +8, ry -30, rx/2 +3, ry -25)
+]]
+
 local screenLogo = [[]]
 
+if TTA_Logo then screenLogo = TTAlogo end
 if FOX_Logo then screenLogo = FOXlogo end
 
 unit.hide()
