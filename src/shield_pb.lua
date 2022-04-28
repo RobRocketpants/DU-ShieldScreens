@@ -120,7 +120,7 @@ for e,f in pairs(unit)do
         if f.getElementClass then
             if f.getElementClass()=="ScreenUnit"then 
                 screens[#screens+1]=f
-            elseif f.getElementClass()=="ShieldGeneratorUnit"then 
+            elseif string.sub(f.getElementClass(),1,6)=="Shield"then
                 shield=f
             end 
         end 
